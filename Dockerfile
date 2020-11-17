@@ -65,6 +65,9 @@ RUN set -eux && \
 
 COPY entrypoint.sh /
 COPY supervisord.d/drill.ini /etc/supervisor.d/
+COPY run.sh /
+COPY hello-world.sql /
+RUN chmod 755 /run.sh
 
 EXPOSE 8047
 
